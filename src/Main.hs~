@@ -1,0 +1,17 @@
+module Musonius where
+import qualified Data.List as DL
+
+removeGreekSections :: String -> String -> String ->[String]
+removeGreekSections start stop text =
+  fmap removeLinesBetween (getTupleList)
+  where
+    startIndices = 
+
+removeGreek :: String -> [String]
+removeGreek str = removeGreekSections startText stopText (lines str)
+
+
+main :: IO ()
+main = do
+  f <- readFile "Musonius.txt"
+  putStrLn unlines (removeGreek f) 
